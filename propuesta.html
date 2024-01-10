@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<style>
+        body {
+            background-color: #ffcccc; /* Cambia el color a tu preferencia */
+            color: #333; /* Color del texto */
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 36px;
+            color: #e60073; /* Cambia el color a tu preferencia */
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+<!-- Pedido especial -->
+ <center>   <h2>¡Un Nuevo Capítulo: Mi Propuesta para Ser Novios!</h2>
+ <br><br> <p>Querida Ingrid,
+
+Estoy emocionado de compartir contigo este momento especial. A lo largo de estos días que hemos estado hablando, he llegado a apreciar tu sinceridad, tu risa y la conexión única que compartimos. Cada conversación ha sido una fuente de alegría y descubrimiento para mí. Quisiera llevar nuestra amistad a un nivel más profundo y significativo al preguntarte: ¿quieres ser mi novia? Durante este tiempo, he llegado a admirar no solo tu inteligencia y encanto, sino también la autenticidad que aportas a nuestra relación. Espero que podamos embarcarnos en esta nueva fase juntos y seguir construyendo recuerdos inolvidables. Tu compañía ha iluminado mi vida y estoy emocionado por la posibilidad de compartir más momentos significativos contigo. ¿Qué piensas? ¿Te gustaría dar este paso conmigo?
+
+Con cariño,
+Daniel ♥️</p> <br><br> <p>¡Hola! ¿Quieres ser mi novia?</p>
+    <button onclick="responder('s')" class="mi-boton">Sí, ¡quiero!</button>
+    <button onclick="responder('n')" class="mi-boton">No, gracias</button>
+    <p id="respuesta"></p>
+</center>
+<style>
+              .mi-boton {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid #3498db;
+            color: #3498db;
+            background-color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Estilo cuando el mouse pasa sobre el botón */
+        .mi-boton:hover {
+            background-color: #3498db;
+            color: white;
+        }
+    </style>
+<script>
+  function responder(respuesta) {
+            if (respuesta === 's') {
+                document.getElementById('respuesta').innerHTML = "¡Yay! Eres mi novia ahora. 😊";
+            } else {
+                document.getElementById('respuesta').innerHTML = "Lo siento este boton no funciona por el momento intente mas tarde o de click en el otro boton";
+            }
+        }
+    </script>
+</body>
+</html>

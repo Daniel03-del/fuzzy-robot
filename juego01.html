@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+ <center><!-- Primer juego: Adivina el número -->
+    <h2>Juego 1: Adivina el Número Suerte</h2>
+    <p>Estoy pensando en un número del 1 al 10. ¿Puedes adivinarlo? solo tienes tres oportunidades</p>
+    <input type="number" id="numeroInput" placeholder="Tu respuesta">
+    <button onclick="adivinarNumero()">¡Adivina!</button>
+    <p id="resultadoNumero"></p>
+
+<a href="juego2.html" class="mi-boton">Siguiente</a> 
+ <style>
+              .mi-boton {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid #3498db;
+            color: #3498db;
+            background-color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Estilo cuando el mouse pasa sobre el botón */
+        .mi-boton:hover {
+            background-color: #3498db;
+            color: white;
+        }
+    </style>
+ <script>
+        // Primer juego: Adivina el Número
+        const numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+
+        function adivinarNumero() {
+            const respuestaUsuario = document.getElementById('numeroInput').value;
+            if (respuestaUsuario == numeroAleatorio) {
+                document.getElementById('resultadoNumero').innerHTML = "¡Correcto! ¡Eres un adivino!";
+            } else {
+                document.getElementById('resultadoNumero').innerHTML = "Incorrecto. El número era " + numeroAleatorio + ". ¡Inténtalo de nuevo!";
+            }
+        } </script>
+</center>
+</body>
+</html>
+
+
+
+

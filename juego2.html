@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+ <center><!-- Segundo juego: Piedra, papel o tijera -->
+    <h2>Juego 2: Piedra, Papel o Tijera</h2>
+    <p>¿Listo para un enfrentamiento épico?</p>
+    <button onclick="jugar('piedra')" class="mi-boton">Piedra</button>
+    <button onclick="jugar('papel')" class="mi-boton">Papel</button>
+    <button onclick="jugar('tijera')" class="mi-boton">Tijera</button>
+    <p id="resultadoJuego"></p>
+<a href="propuesta.html" class="mi-boton">Siguiente</a> 
+ <style>
+              .mi-boton {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid #3498db;
+            color: #3498db;
+            background-color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Estilo cuando el mouse pasa sobre el botón */
+        .mi-boton:hover {
+            background-color: #3498db;
+            color: white;
+        }
+    </style>
+<script>  function jugar(eleccionUsuario) {
+            const opciones = ['piedra', 'papel', 'tijera'];
+            const eleccionComputadora = opciones[Math.floor(Math.random() * 3)];
+
+            if (eleccionUsuario == eleccionComputadora) {
+                document.getElementById('resultadoJuego').innerHTML = "¡Es un empate! ¡Inténtalo de nuevo!";
+            } else if (
+                (eleccionUsuario == 'piedra' && eleccionComputadora == 'tijera') ||
+                (eleccionUsuario == 'papel' && eleccionComputadora == 'piedra') ||
+                (eleccionUsuario == 'tijera' && eleccionComputadora == 'papel')
+            ) {
+                document.getElementById('resultadoJuego').innerHTML = "¡Ganaste! ¡Eres el maestro de Piedra, Papel o Tijera!";
+            } else {
+                document.getElementById('resultadoJuego').innerHTML = "Perdiste. La computadora eligió " + eleccionComputadora + ". ¡Inténtalo de nuevo!";
+            }
+        }
+ </script>
+</center>
+</body>
+</html>
+ 
